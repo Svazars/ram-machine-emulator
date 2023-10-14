@@ -1,0 +1,22 @@
+18   1      ;   1.     Read 1
+18   2      ;   2.     Read 2
+
+            ; LOOP:
+2    1      ;   3.     Load 1
+10   2      ;   4.     Sub 2
+24   13     ;   5.     JZero FINISH
+25   8      ;   6.     JGTZ G
+23   10     ;   7.     Jump L
+
+            ; G:
+4    1      ;   8.     Store 1
+23   3      ;   9.     Jump LOOP
+
+            ; L:
+12   -1     ;   10.    Mult = -1
+4    2      ;   11.    Store 2
+23   3      ;   12.    Jump LOOP
+
+            ; FINISH:
+21   1      ;   13.    Write 1
+0    0      ;   14.    Halt 0

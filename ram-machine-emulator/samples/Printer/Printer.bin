@@ -1,0 +1,21 @@
+20   0      ;   1.     Write =0
+20   1      ;   2.     Write =1
+20   2      ;   3.     Write =2
+20   3      ;   4.     Write =3
+1    1      ;   5.     Load =1
+4    1      ;   6.     Store 1
+6    1      ;   7.     Add =1
+4    1      ;   8.     Store 1
+5    1      ;   9.     Store *1
+25   16     ;   10.    JGTZ  ALTER_LABEL
+
+            ; WRITE_LABEL:
+21   0      ;   11.    Write 0
+21   1      ;   12.    Write 1
+21   2      ;   13.    Write 2
+21   3      ;   14.    Write 3
+0    0      ;   15.    Halt 0
+
+            ; ALTER_LABEL:
+10   1      ;   16.    Sub 1
+23   11     ;   17.    Jump  WRITE_LABEL
